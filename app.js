@@ -23,14 +23,14 @@ function adicionarAmigo() {
 //função para sortear amigo secreto
 function sortearAmigo() {
     if (nomes.length < 1) {
-        document.getElementById("resultadoFinal").innerText = "Adicione mais amigos para sortear!";
+        document.getElementById("resultado").innerText = "Adicione mais amigos para sortear!";
         return;
     }
     const sorteados = Math.floor(Math.random() * nomes.length);
     const nomeSorteado = nomes.splice(sorteados, 1)[0]; // Remove o nome sorteado da lista]; 
 
 
-    document.getElementById("resultadoFinal").innerText ='O amigo secreto é : '+ nomeSorteado;
+    document.getElementById("resultado").innerText ='O amigo secreto é : '+ nomeSorteado;
     // Verifica se a lista está vazia após o sorteio
     if (nomes.length === 0) {
         setTimeout(() => {
